@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     var score : Int = 0
     var pickedAnswer : String = ""
     
+    var getCategory : String = ""
+    
    //<========Outlets from buttons and labels========>
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var progressLabel: UILabel!
@@ -53,12 +55,14 @@ class ViewController: UIViewController {
         button_4.setTitle("\(questionAnswersArray.answerArray[3])", for: .normal)
     }
     @IBAction func backButtonPressed(_ sender: Any) {
-        performSegue(withIdentifier: "backToFirstView", sender: self)
+        performSegue(withIdentifier: "backToSecondView", sender: self)
     }
     
     //<========What happens when the buttons with answers are pressed========>
     @IBAction func answerButton(_ sender: UIButton) {
         pickedAnswer = (sender.titleLabel!.text!)
+        
+        
         
     //<========If the correct answer is selected========>
         if pickedAnswer == allQuestion.list[questionNumber].questionAnswer{
@@ -70,6 +74,7 @@ class ViewController: UIViewController {
             }, completion: { (true) in
                 sender.backgroundColor = UIColor(red: 255/255.0, green: 255/255.0, blue: 255/255.0, alpha: 1.0)
             })
+            
     //<========If the wrong answer is selected========>
         } else {
             
@@ -81,6 +86,8 @@ class ViewController: UIViewController {
         }
         //<========Then we go to the next question========>
         nextQuestion()
+        print(getCategory)
+
     }
     
     

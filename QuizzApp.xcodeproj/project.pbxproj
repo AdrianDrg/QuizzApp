@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		B819C75D2032E1C3003EE802 /* Answers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B819C75C2032E1C3003EE802 /* Answers.swift */; };
 		B819C75F2032E2FA003EE802 /* answersBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = B819C75E2032E2FA003EE802 /* answersBank.swift */; };
+		B82C3A6220372B45007C560E /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82C3A6120372B45007C560E /* CategoryViewController.swift */; };
 		B83811D52031D80300D6419C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83811D42031D80300D6419C /* AppDelegate.swift */; };
-		B83811D72031D80300D6419C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83811D62031D80300D6419C /* ViewController.swift */; };
+		B83811D72031D80300D6419C /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83811D62031D80300D6419C /* ThirdViewController.swift */; };
 		B83811DA2031D80300D6419C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B83811D82031D80300D6419C /* Main.storyboard */; };
 		B83811DC2031D80300D6419C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B83811DB2031D80300D6419C /* Assets.xcassets */; };
 		B83811DF2031D80300D6419C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B83811DD2031D80300D6419C /* LaunchScreen.storyboard */; };
@@ -22,9 +23,10 @@
 /* Begin PBXFileReference section */
 		B819C75C2032E1C3003EE802 /* Answers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answers.swift; sourceTree = "<group>"; };
 		B819C75E2032E2FA003EE802 /* answersBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = answersBank.swift; sourceTree = "<group>"; };
+		B82C3A6120372B45007C560E /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		B83811D12031D80300D6419C /* QuizzApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizzApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B83811D42031D80300D6419C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B83811D62031D80300D6419C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B83811D62031D80300D6419C /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		B83811D92031D80300D6419C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B83811DB2031D80300D6419C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B83811DE2031D80300D6419C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,8 +78,9 @@
 			isa = PBXGroup;
 			children = (
 				B83811D42031D80300D6419C /* AppDelegate.swift */,
-				B83811D62031D80300D6419C /* ViewController.swift */,
+				B83811D62031D80300D6419C /* ThirdViewController.swift */,
 				B899808F2033233900A976AF /* SecondViewController.swift */,
+				B82C3A6120372B45007C560E /* CategoryViewController.swift */,
 			);
 			path = Controler;
 			sourceTree = "<group>";
@@ -175,10 +178,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B82C3A6220372B45007C560E /* CategoryViewController.swift in Sources */,
 				B83811EA2031DCAC00D6419C /* Question.swift in Sources */,
 				B819C75F2032E2FA003EE802 /* answersBank.swift in Sources */,
 				B83811EC2031DD3300D6419C /* QuestionBank.swift in Sources */,
-				B83811D72031D80300D6419C /* ViewController.swift in Sources */,
+				B83811D72031D80300D6419C /* ThirdViewController.swift in Sources */,
 				B89980902033233900A976AF /* SecondViewController.swift in Sources */,
 				B819C75D2032E1C3003EE802 /* Answers.swift in Sources */,
 				B83811D52031D80300D6419C /* AppDelegate.swift in Sources */,

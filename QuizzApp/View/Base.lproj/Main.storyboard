@@ -42,6 +42,19 @@
                                     <action selector="pressPlayButton:" destination="sae-9e-MKI" eventType="touchUpInside" id="Rxy-JW-ksl"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hmz-JV-eyO">
+                                <rect key="frame" x="16" y="390" width="343" height="134"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.41960784309999999" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="43"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressPlayButton:" destination="sae-9e-MKI" eventType="touchUpInside" id="FKX-8c-A5O"/>
+                                    <segue destination="P3F-fw-88m" kind="show" identifier="secondScreen" id="3Av-0f-kSd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1176470588" green="0.56470588239999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="cTV-T3-uba"/>
@@ -49,17 +62,16 @@
                     <connections>
                         <outlet property="playButton" destination="Iya-Rc-LdN" id="gof-V0-bwV"/>
                         <outlet property="titleLabel" destination="4qf-FY-hM6" id="FEi-aL-Nrh"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="secondScreen" id="3O3-Cf-Vi3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8jN-YZ-0u8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="248.80000000000001" y="120.98950524737631"/>
+            <point key="canvasLocation" x="183" y="121"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QuizzApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="QuizzApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -167,6 +179,7 @@
                                 </state>
                                 <connections>
                                     <action selector="backButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wEc-oF-Tlf"/>
+                                    <segue destination="P3F-fw-88m" kind="show" identifier="backToSecondView" id="LbI-wd-Y26"/>
                                 </connections>
                             </button>
                             <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kg6-vY-ddB">
@@ -210,6 +223,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="dx8-0j-L93" id="Yhw-AK-NRJ"/>
                         <outlet property="bgLabel" destination="kg6-vY-ddB" id="PMk-WH-D7N"/>
                         <outlet property="button_1" destination="zz6-zb-BxD" id="H56-85-gYV"/>
                         <outlet property="button_2" destination="Sjg-HA-szh" id="bTD-zn-h6l"/>
@@ -222,12 +236,58 @@
                         <outlet property="progressLabel" destination="E5a-6J-s5f" id="7mt-0J-JQv"/>
                         <outlet property="questionLabel" destination="sRZ-MT-mVP" id="s2g-BA-9lA"/>
                         <outlet property="scoreLabel" destination="mvM-b0-uaN" id="OI4-dO-HZn"/>
-                        <segue destination="sae-9e-MKI" kind="show" identifier="backToFirstView" id="36T-PA-vfR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1232.8" y="120.98950524737631"/>
+            <point key="canvasLocation" x="2492" y="121"/>
+        </scene>
+        <!--Category View Controller-->
+        <scene sceneID="a5C-HW-4i4">
+            <objects>
+                <viewController id="P3F-fw-88m" customClass="CategoryViewController" customModule="QuizzApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LgL-3P-hKj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FEw-H6-t3S">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="100" id="NPy-UR-wd6">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NPy-UR-wd6" id="Y98-tK-W23">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="P3F-fw-88m" id="uAm-gY-S2A"/>
+                                    <outlet property="delegate" destination="P3F-fw-88m" id="u93-Br-H4y"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4sj-TN-SXX" firstAttribute="trailing" secondItem="FEw-H6-t3S" secondAttribute="trailing" id="Mi1-9v-xhw"/>
+                            <constraint firstItem="FEw-H6-t3S" firstAttribute="top" secondItem="4sj-TN-SXX" secondAttribute="top" id="bLd-Bo-lQA"/>
+                            <constraint firstItem="FEw-H6-t3S" firstAttribute="leading" secondItem="4sj-TN-SXX" secondAttribute="leading" id="dLj-Mj-HP8"/>
+                            <constraint firstItem="4sj-TN-SXX" firstAttribute="bottom" secondItem="FEw-H6-t3S" secondAttribute="bottom" id="dWl-AR-x4x"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4sj-TN-SXX"/>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="quizMain" id="Vm4-cU-6b0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D3X-Bc-doP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1313" y="121"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="LbI-wd-Y26"/>
+    </inferredMetricsTieBreakers>
 </document>
